@@ -1,4 +1,5 @@
 import 'package:couchsurfing_flutter_app/models/post_model.dart';
+import 'package:couchsurfing_flutter_app/pages/post_detail.dart';
 import 'package:couchsurfing_flutter_app/widgets/date_time_extension.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,14 @@ class FeedItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PostDetail(post: item),
+          ),
+        );
+      },
       child: Container(
         margin: const EdgeInsets.only(
           left: 15,

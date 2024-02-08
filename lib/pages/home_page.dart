@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List _pages = [const FeedPage(), const ProfilePage()];
+  final List _pages = [const FeedPage(), ProfilePage()];
 
   int _selectedIndex = 0;
 
